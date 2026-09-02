@@ -108,34 +108,46 @@
   /* Experience */
   .role-item{
     display:grid;
-    grid-template-columns: 260px 1fr;
-    gap:36px;
-    padding:36px 0;
+    grid-template-columns: 400px 1fr;
+    gap:40px;
+    padding:40px 0;
     border-bottom:1px solid var(--line);
   }
   .role-item:last-child{border-bottom:none;}
   .role-item .when{color:var(--text-dim); font-size:13px;}
   .role-photo{
     width:100%;
-    aspect-ratio:4/3;
-    object-fit:cover;
+    height:auto;
+    display:block;
     border-radius:4px;
     border:1px solid var(--line);
     background:var(--surface);
     margin-top:12px;
   }
-  .role-photo.contain{object-fit:contain; padding:8px;}
   .role-item h3{font-size:18px; margin-bottom:4px;}
   .role-item .org{color:var(--copper); font-size:14px; margin-bottom:14px;}
   .role-item ul{color:var(--text-dim); font-size:15px; max-width:600px; padding-left:18px;}
   .role-item li{margin-bottom:8px;}
   .role-item li:last-child{margin-bottom:0;}
 
+  .full-figure{margin-top:32px;}
+  .full-figure img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:4px;
+    border:1px solid var(--line);
+  }
+  .full-figure figcaption{
+    color:var(--text-dim);
+    font-size:13px;
+    margin-top:10px;
+  }
+
   /* Projects */
-  .project-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:24px;}
+  .project-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(420px,1fr)); gap:28px;}
   .project-card{border:1px solid var(--line); border-radius:4px; overflow:hidden; background:var(--surface);}
-  .project-card img{width:100%; display:block; aspect-ratio:4/3; object-fit:cover; background:#0B0E10;}
-  .project-card img.contain{object-fit:contain; padding:10px;}
+  .project-card img{width:100%; display:block; aspect-ratio:16/11; object-fit:cover; background:#0B0E10;}
   .project-body{padding:18px;}
   .project-body h3{font-size:16px; margin-bottom:6px;}
   .project-body .tagline{color:var(--teal); font-size:12px; font-family:'IBM Plex Mono',monospace; margin-bottom:8px;}
@@ -165,7 +177,8 @@
     .overview-grid{grid-template-columns:1fr;}
     .skill-groups{grid-template-columns:1fr;}
     .role-item{grid-template-columns:1fr; gap:10px;}
-    .role-photo{max-width:280px;}
+    .role-photo{max-width:100%;}
+    .project-grid{grid-template-columns:1fr;}
     .navlinks{display:none;}
   }
 </style>
@@ -302,7 +315,7 @@
     <div class="role-item">
       <div class="when">
         Sep 2023 – Aug 2024
-        <img class="role-photo" src="exp-trel.jpg" alt="TREL launch vehicle diagram">
+        <img class="role-photo" src="exp-trel.jpg" alt="TREL launch vehicle on the pad">
       </div>
       <div>
         <h3>Airframe Manufacturing Engineer</h3>
@@ -314,6 +327,11 @@
         </ul>
       </div>
     </div>
+
+    <figure class="full-figure">
+      <img src="trel-diagram.jpg" alt="TREL launch vehicle architecture diagram">
+      <figcaption>Launch vehicle architecture — the airframe skirts and LOX tank integration I worked on sit through the mid-body.</figcaption>
+    </figure>
   </div>
 </section>
 
